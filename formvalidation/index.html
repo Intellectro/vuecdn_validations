@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="developer" content="Aneke Oluebube Samuel" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&family=Rajdhani:wght@400;500&display=swap"
+            rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Form Validations</title>
+    </head>
+    <body>
+        <div id="app">
+            <div class="container">
+                <div class="page-container">
+                    <div class="header">
+                        <span class="link">
+                            <a href="#">Login</a>
+                        </span>
+                    </div>
+                    <div class="split-pages">
+                        <div class="image-container">
+                            <img :src="imageUrl" :alt="altImage" />
+                        </div>
+                        <div class="signup-page">
+                            <div class="sign-title">Create Account</div>
+                            <div class="form-container">
+                                <form
+                                    action="#"
+                                    class="form-page"
+                                    @submit.prevent="validateForm()">
+                                    <div class="box-inputs">
+                                        <label for="firstname"
+                                            >First Name</label
+                                        >
+                                        <div class="form-icon-input">
+                                            <input
+                                                type="text"
+                                                name="firstname" />
+                                            <i
+                                                class="fa fa-user"
+                                                title="User icon"></i>
+                                        </div>
+                                        <small class="error-msg"></small>
+                                    </div>
+                                    <div class="box-inputs">
+                                        <label for="firstname">Last Name</label>
+                                        <div class="form-icon-input">
+                                            <input
+                                                type="text"
+                                                name="lastname" />
+                                            <i class="fa fa-user"></i>
+                                        </div>
+                                        <small class="error-msg"></small>
+                                    </div>
+                                    <div class="box-inputs">
+                                        <label for="firstname"
+                                            >Phone Number</label
+                                        >
+                                        <div class="form-icon-input">
+                                            <input type="tel" name="phone" />
+                                            <i class="fa fa-mobile"></i>
+                                        </div>
+                                        <small class="error-msg"></small>
+                                    </div>
+                                    <div class="box-inputs">
+                                        <label for="firstname"
+                                            >Email Address</label
+                                        >
+                                        <div class="form-icon-input">
+                                            <input type="text" name="email" />
+                                            <i class="fa fa-envelope"></i>
+                                        </div>
+                                        <small class="error-msg"></small>
+                                    </div>
+                                    <div class="box-inputs">
+                                        <label for="firstname">Password</label>
+                                        <div class="form-icon-input">
+                                            <input
+                                                autocomplete="current-password"
+                                                type="password"
+                                                name="password" />
+                                            <i class="fa fa-key"></i>
+                                        </div>
+                                        <small class="error-msg"></small>
+                                    </div>
+                                    <div class="btn-box">
+                                        <button
+                                            type="submit"
+                                            class="submit-btn">
+                                            Sign Up
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert-msg">
+                        <span>Form submitted successfully</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="./app.js"></script>
+    </body>
+</html>

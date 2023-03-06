@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+#app {
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+}
+
+.page-container {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    width: 100%;
+    padding: 15px 5%;
+    background-color: #19467d;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.link a {
+    color: white;
+    text-decoration: none;
+}
+
+.split-pages {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.image-container {
+    flex: 0.55;
+    height: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.signup-page {
+    flex: 0.45;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 1rem 5.5%;
+}
+
+.form-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.sign-title {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.box-inputs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+}
+
+.form-icon-input {
+    position: relative;
+}
+.form-icon-input input {
+    padding: 7px;
+    width: 100%;
+    border-radius: 8px;
+    border-width: thin;
+    font-weight: 600;
+}
+
+.form-icon-input input:focus {
+    outline: none;
+}
+
+.form-icon-input .fa {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn-box {
+    align-self: center;
+}
+
+.btn-box button {
+    width: 165px;
+    height: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    color: white;
+    background-color: #19467d;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.error-msg {
+    font-size: 10px;
+    text-align: right;
+}
+
+.success input {
+    border: 1.4px solid green;
+}
+
+.error input {
+    border: 1.4px solid red;
+}
+
+.error ~ .error-msg {
+    color: red;
+}
+
+.alert-msg {
+    width: 350px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #19467d;
+    transform: translate(-50%, -50%);
+    color: white;
+    border-radius: 8px;
+    display: none;
+}
+
+.show-alert {
+    display: flex;
+}
+
+@media screen and (max-width: 950px) {
+    .split-pages {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 653px) {
+        .sign-title {
+            font-size: 35px;
+            text-align: center;
+        }
+    }
+    @media screen and (max-width: 300px) {
+        .title {
+            font-size: 28px;
+            text-align: center;
+        }
+    }
+}
